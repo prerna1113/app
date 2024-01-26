@@ -3,9 +3,9 @@ import './App.css';
 import { Box, Typography } from '@mui/material';
 
 const lists =[
-  {title:'cabbage', id:'1'},
-  {title:'apple', id:'2'},
-  {title:'orange', id:'3'}
+  {title:'cabbage', id:'1', isFruit:false},
+  {title:'apple', id:'2',isFruit:true},
+  {title:'orange', id:'3',isFruit:true}
 ]
 
 
@@ -13,7 +13,10 @@ const lists =[
 function App() {
 
   const listItems = lists.map(product=>
-    <li key={product.id}>
+    <li
+     key={product.id}
+    style={{color:product.isFruit ? 'red' : 'green'}}
+      >
       {product.title}
       
     </li>)
@@ -24,6 +27,8 @@ function App() {
       <ul>
         {listItems}
       </ul>
+
+     
      
      
      

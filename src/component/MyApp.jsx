@@ -49,7 +49,7 @@ function ProductTable({ products, filterText, inStockOnly }) {
   });
 
   return (
-    <table>
+    <table style={{marginLeft:'40%',marginTop:'20px',width:"300px"}}>
       <thead>
         <tr>
           <th>Name</th>
@@ -94,7 +94,7 @@ function FilterableProductTable({ products }) {
   const [inStockOnly, setInStockOnly] = useState(false);
 
   return (
-    <div>
+    <div style={{textAlign:'center'}}>
       <SearchBar
         filterText={filterText}
         inStockOnly={inStockOnly}
@@ -121,7 +121,7 @@ const PRODUCTS = [
 
 const MyApp = () => {
   return (
-    <div>
+    <div style={{textAlign:'left'}}>
       <FilterableProductTable products={PRODUCTS} />
       {/* Removed the semicolon at the end of the line above */}
     </div>

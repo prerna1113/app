@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
+import { useState } from 'react';
+import MyApp from './component/MyApp';
 
 const lists =[
   {title:'cabbage', id:'1', isFruit:false},
@@ -12,14 +14,29 @@ const lists =[
 
 function App() {
 
+  const [count,setCount] =useState(1);
+
+  const [times,setTimes] = useState(1);
+
+  const increaseQuantity =()=>{
+    setCount(count+1);
+  }
+
+  const decreaseQuantity =()=>{
+    if(count>1){
+      setCount(count-1);
+    }
+  }
+
   const listItems = lists.map(product=>
     <li
      key={product.id}
-    style={{color:product.isFruit ? 'red' : 'green'}}
+    style={{color:product.isFruit && 'red'}}
       >
       {product.title}
       
     </li>)
+    
 
   
   return (
@@ -27,6 +44,22 @@ function App() {
       <ul>
         {listItems}
       </ul>
+
+      <Button 
+      onClick={increaseQuantity}
+      variant='contained'>
+        no.of Times Clicked is {count}
+
+      </Button>
+      <br></br>
+
+      <Button 
+      onClick={decreaseQuantity }
+      variant ="contained">
+        click 
+      </Button>
+
+      <MyApp />
 
      
      

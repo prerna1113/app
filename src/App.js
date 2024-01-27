@@ -3,6 +3,7 @@ import './App.css';
 import { Box, Button, Typography } from '@mui/material';
 import { useState } from 'react';
 import MyApp from './component/MyApp';
+import ConditionalRendering from './component/ConditionalRendering';
 
 const lists =[
   {title:'cabbage', id:'1', isFruit:false},
@@ -60,6 +61,8 @@ function App() {
       </Button>
 
       <MyApp />
+
+      <ConditionalRendering />
 
      
      

@@ -1,36 +1,38 @@
-import React from 'react'
-import { Box, List, ListItem, Typography } from '@mui/material'
+import React from 'react';
+import { Box, Typography } from '@mui/material';
 
-function Item({name,ispacked}){
+
+function Item({name,isPacked}){
     return(
-        <li className='Item'>{name}{ispacked && '✔'}</li>
+        <li>{name}{isPacked && '✔'}</li>
     )
 }
 
-
 const ConditionalRendering = () => {
   return (
-<section>
-    <Typography variant ="h4" gutterBottom>
-Packing List
+   <section>
+    <Typography variant ="h4">
+        Packing List
+
     </Typography>
+   
     <ul>
-        <Item
-        ispacked={true}
+        <Item 
+        isPacked={true}
         name="Space Suit"
         />
 
-<Item
-        ispacked={false}
-        name="Photo of Tam"
+        <Item
+        isPacked={true}
+        name="Photo of Tan"
         />
 
-<Item
-        ispacked={true}
-        name="Helmet with a golden leaf"
+        <Item
+        isPacked={true}
+        name="Helmet with golden leaf"
         />
     </ul>
-</section>
+   </section>
   )
 }
 

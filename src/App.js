@@ -4,6 +4,8 @@ import { Box, Button, Typography } from '@mui/material';
 import { useState } from 'react';
 import MyApp from './component/MyApp';
 import ConditionalRendering from './component/ConditionalRendering';
+import RenderingList from './component/RenderingList';
+import First from './component/First';
 
 const lists =[
   {title:'cabbage', id:'1', isFruit:false},
@@ -63,6 +65,9 @@ function App() {
       <MyApp />
 
       <ConditionalRendering />
+      <RenderingList />
+
+      <First /> 
 
      
      

@@ -6,6 +6,8 @@ import MyApp from './component/MyApp';
 import ConditionalRendering from './component/ConditionalRendering';
 import RenderingList from './component/RenderingList';
 import First from './component/First';
+import StateCon from './component/StateCon';
+import Second from './component/Second';
 
 const lists =[
   {title:'cabbage', id:'1', isFruit:false},
@@ -68,6 +70,10 @@ function App() {
       <RenderingList />
 
       <First /> 
+
+      <StateCon />
+
+      <Second />
 
      
      

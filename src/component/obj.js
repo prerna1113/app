@@ -20,3 +20,9 @@ var person ={
 
 person.getFullName();
 console.log(p2.name);
+
+if(person.hasOwnProperty('name')){
+   console.log(person.name) 
+}
+
+

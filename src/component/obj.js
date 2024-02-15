@@ -31,7 +31,7 @@ var person ={name:'Prerna'};
 
 var p1 = new Object();
 p1.name = 'Prerna Kumari';
-console.log(p1.name);
+//console.log(p1.name);
 
 
 var friend = {
@@ -43,5 +43,10 @@ var friend = {
    }
 }
 
-console.log(friend.getFullName());
+//console.log(friend.getFullName());
 
+
+for(var prop in friend){
+    console.log( "i am prop"+' '+prop);
+   // console.log(friend[prop]);
+}

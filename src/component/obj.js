@@ -26,3 +26,22 @@ if(person.hasOwnProperty('name')){
 }
 
 
+var person ={name:'Prerna'};
+
+
+var p1 = new Object();
+p1.name = 'Prerna Kumari';
+console.log(p1.name);
+
+
+var friend = {
+    firstName: 'Faizan',
+    lastName:'Wani',
+    age:'25',
+   getFullName:  function(){
+    return this.firstName + ' ' +this.lastName + ' '+ this.age;
+   }
+}
+
+console.log(friend.getFullName());
+

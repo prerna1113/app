@@ -46,7 +46,7 @@ var friend = {
 //console.log(friend.getFullName());
 
 
-for(var prop in friend){
-    console.log( "i am prop"+' '+prop);
+for(var pro in friend){
+    console.log( "i am prop"+' '+pro);
    // console.log(friend[prop]);
 }

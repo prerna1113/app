@@ -35,3 +35,33 @@ var Person = {
 
 Person.getFullName();
 
+//objects created using object() constructor function
+
+var p2 = new Object();
+p2.name ='sifra';
+p2.age = 34;
+p2.myFunc= function(){
+    console.log(this.age);
+}
+p2.myFunc();
+
+
+//enumerate object's properties
+for(var prop in p2){
+    console.log(prop);
+    
+}
+
+//pass by refrence 
+function changeFirstName(per){
+    per.firstName = 'steve';
+}
+
+var p3 = {firstName:'john'};
+
+changeFirstName(p3);
+console.log(p3.firstName);
+
+
+
+

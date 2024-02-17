@@ -1,4 +1,4 @@
-
+               //OBJECT
 
 //using object literal syntax
 
@@ -61,6 +61,21 @@ var p3 = {firstName:'john'};
 
 changeFirstName(p3);
 console.log(p3.firstName);
+
+//Nested Objects
+var person1 ={
+    greet:'Hello',
+firstName:'Johnny',
+address:{id:'1',
+country:'Uk'
+}
+   
+
+}
+console.log(person1.address);
+
+
+
 
 
 

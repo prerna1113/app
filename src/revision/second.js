@@ -109,5 +109,32 @@ catch(ex){
     console.log(ex.message);
 }
 
+//enumerable Property desccriptor
+
+var Student4 = new Student2();
+for(var prop in Student4){
+    console.log(prop);
+}
+
+Object.defineProperty(Student4,'name',{enumerable:false});
+console.log("after setting enumerable to false");
+
+for(var prop in Student4){
+    console.log(prop);
+}
+
+//configurate attribute
+
+var student5 = new Student2();
+
+Object.defineProperty(student5,'name',{configurable:false});
+try{
+    Object.defineProperty(student5,'name',{writable:false});
+
+}
+catch(ex){
+    console.log(ex.message);
+}
+
 
 

@@ -2,6 +2,30 @@
 
 //Inheritance
 
+
+function Prerna(name,gender){
+    this.Name = name || "unknown";
+    this.Gender = gender || "unknown";
+
+}
+Prerna.prototype.getFull= function(){
+    return this.Name +" "+ this.Gender;
+}
+
+function MyFunc(name,gender,school){
+    Prerna.call(this,name,gender);
+    this.SchoolName = school || 'unknown';
+
+}
+
+MyFunc.prototype = new Prerna();
+MyFunc.prototype.constructor = MyFunc;
+
+
+var myVar = new MyFunc("Peru","Female","XYZ");
+console.log(myVar.getFull());
+
+
 function Person(firstName,lastName){
     this.FirstName = firstName || "unknown";
     this.LastName = lastName || "unknown";
@@ -52,3 +76,23 @@ console.log(Std.getFullName());
 // inheritance chain correctly, allowing Student objects to inherit
 //  properties and methods from both the Student constructor function 
 //  and the Person constructor function.
+
+
+
+function ParentClass(firstName,middleName){
+    this.Name = firstName || "unknown";
+    this.MidName = middleName || "unknown";
+}
+
+ParentClass.prototype.getName = function(){
+    return this.Name +" "+ this.MidName;
+}
+function DerivedClass(firstName,middleName,age){
+    ParentClass.call(this,firstName,middleName);
+    this.Age = age || "unknown";
+}
+
+DerivedClass.prototype = new ParentClass();
+DerivedClass.prototype.constructor = DerivedClass;
+var std2 = new DerivedClass("Prema","kumari","xyz");
+console.log(std2.getName());

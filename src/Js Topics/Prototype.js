@@ -1,4 +1,6 @@
-            //Prototype
+         
+
+         //Prototype
 
 //js is a dynamic language you can attach new properties to an object at any time
 
@@ -38,6 +40,20 @@ console.log(studObj1.age);
 
 var studObj2 = new student();
 console.log(studObj2.age);
+student.prototype = {age:'20'};
+var studObj3 = new student();
+console.log(studObj3.age);
+
+
+//every obj which is created using literal syntax or constructor  syntax 
+//with the new keyword includes _proto_ property that points to prototype object of a 
+//function that created this object .
+
+
+
+var studObj = new student();
+var proto = Object.getPrototypeOf(studObj2);
+console.log( "this is proto",proto.consturctor);
 
 
 

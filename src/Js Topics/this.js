@@ -1,6 +1,6 @@
 
 
-//  This Keyword
+//                    This Keyword
 
 // this points to particular Object now which is that object is depends on how a
 // function which includes 'this' keyword is being called
@@ -10,7 +10,6 @@
 // its value is determined by how a function is called not where it is defined
 
 //the primary use cases for 'this' includes
-
 //1.implicit Binding:- when a function is callled as a method of an object ,'this'
 //refres to the object itself
 
@@ -44,4 +43,34 @@ console.log(John.name);
 //this refres to the global object('window in browser 'global' in Node.js);
 
 
- 
+ //Call Method
+
+ //call method calls a function with a given 'this' value and 
+ //arguments provided individually
+
+ function greet1(){
+    console.log(`hello,${this.name}`);
+
+ }
+ const person2 = {name:'Prerna'};
+ greet1.call(person2);
+
+ //Apply:- The apply method is similat to 'call',but
+ //it accepts arguments as an array
+
+ function greeting(greet){
+    console.log(`${greet},${this.name}`);
+
+ }
+ const person3 = {name:'Bob'};
+ greeting.apply(person3,["Hi"]);
+
+ //3. bind:- the bind method creates a new function that when called
+ //has its 'this' keyword set to the  provided value
+
+ function greet2(){
+    console.log(`Hello ,${this.name}`);
+ }
+ const person4 ={name:'Charlie'};
+ const greetPerson = greet2.bind(person4);
+ greetPerson();

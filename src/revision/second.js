@@ -4,15 +4,7 @@
 
 //obj literal syntax
 
-var person = {
-    firstName:'John',
-    lastName:'Smith',
-    getFullName: function(){
-        return person.firstName + ' '+person.lastName;
-    }
-}
 
-console.log(person.getFullName());
 
 
 //obj constructor Function
@@ -68,6 +60,54 @@ addMethod.add = "Method";
 
 console.log(addMethod.showFunction());
 
+//Property descriptor
+// in js each property of an object has property descriptor which describes
+//the nature of the property
+//property descriptor for a particular object's property can be retrives using 
+//Object.getOwnPropertyDescriptor() method
+
+var person = {
+    firstName:'John',
+    lastName:'Smith',
+    getFullName: function(){
+        return person.firstName + ' '+person.lastName;
+    }
+}
+
+console.log(person.getFullName());
+
+function Student(){
+    this.name = "John";
+    this.gender = "Male";
+    this.SayHi= function(){
+        console.log("Hi Mr." + this.name);
+    }
+}
+var student1 = new Student();
+console.log(Object.getOwnPropertyDescriptor(Person2,"name"));
+
+
+
+//Object.defineProperty()
+
+//This method defines a new property on the specified object or modifies an existing property
+//or property descriptor
+
+function Student2(){
+    this.name = "Steve";
+    this.gender = "female";
+}
+
+var Student3 = new Student2();
+Object.defineProperty(Student3,'name',{writable:false})
+
+try{
+    Student3.name = "James";
+    console.log(Student3.name);
+}
+catch(ex){
+    console.log(ex.message);
+}
 
 
 

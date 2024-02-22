@@ -28,3 +28,9 @@
         return val1 + val2;
 
     }
+    console.log(Sub(8,10))
+
+   function Sub(one,two){
+    return two-one
+
+   }
